@@ -8,7 +8,7 @@
  *
  * @author CHANGE_THIS_TO_YOUR_NAME
  */
-public class Sundae{
+public class Sundae extends DessertItem{
     
 
     
@@ -21,6 +21,11 @@ public class Sundae{
     
     public String toString()
     {
+        
+    }
+
+    @Override
+    public int getCost() {
         
     }
     

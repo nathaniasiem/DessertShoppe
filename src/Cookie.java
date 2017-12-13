@@ -8,7 +8,7 @@
  *
  * @author CHANGE_THIS_TO_YOUR_NAME
  */
-public class Cookie {
+public class Cookie extends DessertItem {
     
     
     public Cookie(String name, int number, int pricePer12)
@@ -21,5 +21,9 @@ public class Cookie {
     {
         
     }
-    
+
+    @Override
+    public int getCost() {
+     return;   
+    }
 }
