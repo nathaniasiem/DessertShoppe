@@ -21,5 +21,10 @@ public class IceCream extends DessertItem{
      
        
     }
+
+    @Override
+    public int getCost() {
+        
+    }
     
 }

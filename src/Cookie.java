@@ -9,21 +9,24 @@
  * @author CHANGE_THIS_TO_YOUR_NAME
  */
 public class Cookie extends DessertItem {
-    
-    
-    public Cookie(String name, int number, int pricePer12)
-    {
-        
-    }
 
+    private int CookieNum;
+    private int price;
     
-    public String toString()
-    {
-        
+    public Cookie(String name, int number, int pricePer12) {
+        super(name);
+        number=this.CookieNum;
+        pricePer12 = this.price;
+
     }
 
     @Override
     public int getCost() {
-     return;   
+        int Cost = number;
+        return Cost;
+    }
+
+    @Override
+    public String toString() {
     }
 }

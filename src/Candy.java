@@ -9,20 +9,35 @@
  * @author @simon7323
  */
 public class Candy extends DessertItem {
-
+/**
+ * 
+ */
     private double weight;
     private int pricePerLbs;
+    /**
+     * 
+     * @param name
+     * @param weight
+     * @param pricePerLbs 
+     */
     public Candy(String name, double weight, int pricePerLbs) {
         super(name);
         weight = this.weight;
         pricePerLbs = this.pricePerLbs;    
     }
-
+/**
+ * 
+ * @return 
+ */
     @Override
     public int getCost() {
        int Cost = (int)(Math.round(weight)*pricePerLbs);
        return Cost;
     }
+    /**
+     * 
+     * @return 
+     */
     @Override
     public String toString() {
         String output ="\n";
