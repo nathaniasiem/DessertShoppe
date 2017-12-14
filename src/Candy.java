@@ -6,7 +6,7 @@
 
 /**
  *
- * @author @simon7323
+ * @author simon7323
  */
 public class Candy extends DessertItem {
 /**
@@ -41,6 +41,6 @@ public class Candy extends DessertItem {
     @Override
     public String toString() {
         String output ="\n";
-        output+=
+        
     }
 }

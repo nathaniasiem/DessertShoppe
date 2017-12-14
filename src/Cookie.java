@@ -6,23 +6,23 @@
 
 /**
  *
- * @author CHANGE_THIS_TO_YOUR_NAME
+ * @author simon7323
  */
 public class Cookie extends DessertItem {
 
-    private int CookieNum;
-    private int price;
+    private int number;
+    private int pricePer12;
     
     public Cookie(String name, int number, int pricePer12) {
         super(name);
-        number=this.CookieNum;
-        pricePer12 = this.price;
+        number=this.number;
+        pricePer12 = this.pricePer12;
 
     }
 
     @Override
     public int getCost() {
-        int Cost = number;
+        int Cost = (number/12)*pricePer12;
         return Cost;
     }
 

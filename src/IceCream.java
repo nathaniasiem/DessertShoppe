@@ -6,25 +6,22 @@
 
 /**
  *
- * @author CHANGE_THIS_TO_YOUR_NAME
+ * @author simon7323
  */
-public class IceCream extends DessertItem{
+public class IceCream extends DessertItem {
 
-    public IceCream(String name, int cost)
-    {
-        
+    public int cost;
+
+    public IceCream(String name, int cost) {
+        super(name);
+        cost=this.cost;
     }
-
-  
-    public String toString()
-    {
-     
-       
-    }
-
-    @Override
+ @Override
     public int getCost() {
-        
+     return cost;
     }
-    
 }
+    public String toString() {
+    }
+
+   

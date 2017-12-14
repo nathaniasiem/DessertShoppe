@@ -6,27 +6,26 @@
 
 /**
  *
- * @author CHANGE_THIS_TO_YOUR_NAME
+ * @author simon7323
  */
-public class Sundae extends DessertItem{
-    
+public class Sundae extends IceCream {
+ 
+    private String toppingName;
+    private int toppingCost;
 
-    
-    public Sundae(String icName, int icCost, String toppingName, int toppingCost)
-    {
-       
-    }
-    
+    public Sundae(String icName, int icCost, String toppingName, int toppingCost) {
+        super(icName,icCost);
+        toppingName = this.toppingName;
+        toppingCost=this.toppingCost;
 
-    
-    public String toString()
-    {
-        
     }
 
     @Override
     public int getCost() {
-        
+        sCost = icCost+toppingCost;
+        return sCost;
     }
-    
+
+    public String toString() {
+    }
 }
