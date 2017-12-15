@@ -14,14 +14,16 @@ public class IceCream extends DessertItem {
 
     public IceCream(String name, int cost) {
         super(name);
-        cost=this.cost;
-    }
- @Override
-    public int getCost() {
-     return cost;
-    }
-}
-    public String toString() {
+        cost = this.cost;
     }
 
-   
+    @Override
+    public int getCost() {
+        return cost;
+    }
+}
+public String toString() {
+String output = super.name;
+output+= getCost();
+return output
+    }

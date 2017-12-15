@@ -22,7 +22,7 @@ public class Sundae extends IceCream {
 
     @Override
     public int getCost() {
-        sCost = icCost+toppingCost;
+        int sCost = super.cost+toppingCost;
         return sCost;
     }
 

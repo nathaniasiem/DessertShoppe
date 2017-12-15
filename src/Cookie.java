@@ -28,5 +28,9 @@ public class Cookie extends DessertItem {
 
     @Override
     public String toString() {
+        String output = super.getName();
+        output+=number+"\n";
+        output += getCost()+"\n";
+        return output;
     }
 }

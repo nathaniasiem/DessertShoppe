@@ -40,7 +40,9 @@ public class Candy extends DessertItem {
      */
     @Override
     public String toString() {
-        String output ="\n";
-        
+        String output = DessertShoppe.cents2dollarsAndCents(pricePerLbs);
+        output += super.getName()+"\n";
+        output += this.weight+"\n";
+        return output;
     }
 }
