@@ -23,7 +23,6 @@ public class IceCream extends DessertItem {
     }
 }
 public String toString() {
-String output = super.name;
-output+= getCost();
-return output
+String output = "\n";
+
     }
