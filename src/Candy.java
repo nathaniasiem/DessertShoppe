@@ -10,7 +10,7 @@
  */
 public class Candy extends DessertItem {
 /**
- * 
+ * create instance variables to be available throughout class
  */
     private double weight;
     private int pricePerLbs;
@@ -27,7 +27,7 @@ public class Candy extends DessertItem {
     }
 /**
  * 
- * @return 
+ * @return the total cost of the candy by weight 
  */
     @Override
     public int getCost() {
@@ -36,12 +36,19 @@ public class Candy extends DessertItem {
     }
     /**
      * 
-     * @return 
+     * @return the candy name and the weight with price
      */
     @Override
     public String toString() {
         String output= DessertShoppe.cents2dollarsAndCents(this.getCost());
-        int widthLeft = DessertShoppe.RECEIPT_WIDTH - super.getName().length();
-        return output;
+        int width = DessertShoppe.RECEIPT_WIDTH - super.getName().length();
+        //create for loop to got through each character until reaching the last spot available
+        for(int i=0;i<width;i++){
+            output = output+ "\n";
+        }
+        return weight + "lbs. @ " +DessertShoppe.cents2dollarsAndCents(pricePerLbs)  + "/lb"
+                + super.getName() + output; 
+        
+        
     }
 }
