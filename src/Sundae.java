@@ -9,24 +9,30 @@
  * @author simon7323
  */
 public class Sundae extends IceCream {
- 
+
     private String toppingName;
     private int toppingCost;
 
     public Sundae(String icName, int icCost, String toppingName, int toppingCost) {
-        super(icName,icCost);
+        super(icName, icCost);
         toppingName = this.toppingName;
-        toppingCost=this.toppingCost;
+        toppingCost = this.toppingCost;
 
     }
 
     @Override
     public int getCost() {
-        int sCost = super.cost+toppingCost;
+        int sCost = super.cost + toppingCost;
         return sCost;
     }
 
+    @Override
     public String toString() {
-        output = 
+        String output = DessertShoppe.cents2dollarsAndCents(this.getCost());
+        int Cwidth = DessertShoppe.RECEIPT_WIDTH - super.getName().length();
+        for (int i = 0; i < Cwidth; i++) {
+            output = output + "\n";
+        }
+        return toppingName + " with " + super.getName() + output;
     }
 }
