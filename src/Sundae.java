@@ -15,8 +15,8 @@ public class Sundae extends IceCream {
 
     public Sundae(String icName, int icCost, String toppingName, int toppingCost) {
         super(icName, icCost);
-        toppingName = this.toppingName;
-        toppingCost = this.toppingCost;
+       this.toppingName  = toppingName;
+      this.toppingCost   =toppingCost ;
 
     }
 

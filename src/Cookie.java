@@ -15,8 +15,8 @@ public class Cookie extends DessertItem {
     
     public Cookie(String name, int number, int pricePer12) {
         super(name);
-        number=this.number;
-        pricePer12 = this.pricePer12;
+       this.number =number;
+       this.pricePer12  = pricePer12;
 
     }
 

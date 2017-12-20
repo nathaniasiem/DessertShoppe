@@ -24,8 +24,8 @@ public class Candy extends DessertItem {
      */
     public Candy(String name, double weight, int pricePerLbs) {
         super(name);
-        weight = this.weight;
-        pricePerLbs = this.pricePerLbs;
+        this.weight = weight;
+        this.pricePerLbs = pricePerLbs;
     }
 
     /**

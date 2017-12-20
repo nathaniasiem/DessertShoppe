@@ -14,7 +14,7 @@ public class IceCream extends DessertItem {
 
     public IceCream(String name, int cost) {
         super(name);
-        cost = this.cost;
+        this.cost =cost ;
     }
 
     @Override
