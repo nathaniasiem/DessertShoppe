@@ -34,7 +34,7 @@ public class Candy extends DessertItem {
      */
     @Override
     public int getCost() {
-        int Cost = (int) (Math.round(weight) * pricePerLbs);
+        int Cost = (int) (Math.round(this.weight * this.pricePerLbs));
         return Cost;
     }
 
@@ -44,15 +44,13 @@ public class Candy extends DessertItem {
      */
     @Override
     public String toString() {
-        String output = "\n";
         String cents2Dollars = DessertShoppe.cents2dollarsAndCents(this.getCost());
-        int width = DessertShoppe.RECEIPT_WIDTH - super.getName().length();
-        //create for loop to got through each character until reaching the last spot available
-        for (int i = 0; i < width; i++) {
-            output = cents2Dollars + "\n";
-        }
-        return weight + "lbs @ " + DessertShoppe.cents2dollarsAndCents(pricePerLbs) + " /lb "
-                + super.getName() + cents2Dollars;
+        int width = DessertShoppe.RECEIPT_WIDTH - super.getName().length()-cents2Dollars.length();
+          for (int i = 0; i < width; i++) {
+            cents2Dollars  = " " + cents2Dollars;
+          }
+        return weight + " lbs. @ $" + DessertShoppe.cents2dollarsAndCents(pricePerLbs) + " /lb. "
+                + "\n"+ super.getName() + cents2Dollars ;
 
     }
 }

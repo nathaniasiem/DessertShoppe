@@ -22,16 +22,16 @@ public class Cookie extends DessertItem {
 
     @Override
     public int getCost() {
-        int Cost = (number/12)*pricePer12;
+        int Cost = (number*pricePer12)/12;
         return Cost;
     }
 
     @Override
     public String toString() {
-        String output = DessertShoppe.cents2dollarsAndCents(this.getCost());
+        String cents2Dollars = DessertShoppe.cents2dollarsAndCents(this.getCost());
         int Cwidth = DessertShoppe.RECEIPT_WIDTH - super.getName().length();
         for (int i = 0; i < Cwidth; i++) {
-            output = output + "\n";
-    } return number + "@" + DessertShoppe.cents2dollarsAndCents(pricePer12)+super.getName()+output;
+            cents2Dollars = cents2Dollars + "\n";
+    } return number + "@" + DessertShoppe.cents2dollarsAndCents(pricePer12)+super.getName()+cents2Dollars;
 }
 }

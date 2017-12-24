@@ -15,8 +15,8 @@ public class Sundae extends IceCream {
 
     public Sundae(String icName, int icCost, String toppingName, int toppingCost) {
         super(icName, icCost);
-       this.toppingName  = toppingName;
-      this.toppingCost   =toppingCost ;
+        this.toppingName = toppingName;
+        this.toppingCost = toppingCost;
 
     }
 
@@ -28,11 +28,21 @@ public class Sundae extends IceCream {
 
     @Override
     public String toString() {
-        String output = DessertShoppe.cents2dollarsAndCents(this.getCost());
-        int Cwidth = DessertShoppe.RECEIPT_WIDTH - super.getName().length();
-        for (int i = 0; i < Cwidth; i++) {
-            output = output + "\n";
+        //convert cents to dollars using cens2dollarsAndCents
+        String output = DessertShoppe.cents2dollarsAndCents(super.getCost());
+
+        //create string storing cost in a string 
+        String costLength = Integer.toString(super.getCost() + this.getCost());
+        //find spacing needed between name and cost in reciept by subtracting 30(total spaces) by 
+
+        //length of name and length of cost
+        int spacing = 30 - super.getName().length() - costLength.length() - 1;
+
+        //loop through an add a space each time up to "spacing" integer
+        for (int i = 0; i < spacing; i++) {
+            output = " " + output;
         }
-        return toppingName + " with " + super.getName() + output;
+        //return name of cookie along with cost
+        return this.toppingName + " Sundae with\n" + this.getName() + output;
     }
 }
