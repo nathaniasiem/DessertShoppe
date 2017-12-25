@@ -17,10 +17,10 @@ public class Candy extends DessertItem {
     private int pricePerLbs;
 
     /**
-     *
-     * @param name
-     * @param weight
-     * @param pricePerLbs
+     *constructor to identify the DessertItem
+     * @param name - name of the candy
+     * @param weight-weight amount of the candy
+     * @param pricePerLbs- price based on the weight
      */
     public Candy(String name, double weight, int pricePerLbs) {
         super(name);
@@ -29,7 +29,7 @@ public class Candy extends DessertItem {
     }
 
     /**
-     *
+     *method to get the price
      * @return the total cost of the candy by weight
      */
     @Override
@@ -39,18 +39,22 @@ public class Candy extends DessertItem {
     }
 
     /**
-     *
-     * @return the candy name and the weight with price
+     *method to print out in receipt format
+     * @return the candy name, the weight and the price
      */
     @Override
     public String toString() {
-        String cents2Dollars = DessertShoppe.cents2dollarsAndCents(this.getCost());
-        int width = DessertShoppe.RECEIPT_WIDTH - super.getName().length()-cents2Dollars.length();
-          for (int i = 0; i < width; i++) {
-            cents2Dollars  = " " + cents2Dollars;
-          }
+        //Store the cost into string
+        String costToDollars = DessertShoppe.cents2dollarsAndCents(this.getCost());
+        //calculate the width left in the receipt
+        int width = DessertShoppe.RECEIPT_WIDTH - super.getName().length() - costToDollars.length();
+        //use for loop to go through all the characters with the exact amount of spacing
+        for (int i = 0; i < width; i++) {
+            costToDollars = " " + costToDollars;
+        }
+        //print out the name, amount of candy and price
         return weight + " lbs. @ $" + DessertShoppe.cents2dollarsAndCents(pricePerLbs) + " /lb. "
-                + "\n"+ super.getName() + cents2Dollars ;
+                + "\n" + super.getName() + costToDollars;
 
     }
 }
